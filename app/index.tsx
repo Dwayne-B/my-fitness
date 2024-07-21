@@ -1,10 +1,6 @@
 import { StyleSheet,Text, View } from 'react-native'
 import {FoodListItem} from './components/FoodListItem'
 
-
-interface ItemType{
-    label:string
-}
 const styles = StyleSheet.create(
     {
         container:{
