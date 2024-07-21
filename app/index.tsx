@@ -1,0 +1,47 @@
+import { StyleSheet,Text, View } from 'react-native'
+import React, { Component } from 'react'
+import { AntDesign } from '@expo/vector-icons';
+
+const FoodListItem  =({item})=>{
+
+
+    return(
+        <View>
+             <View style={styles.card}>
+      <View style={{flex:1}}>
+          <Text style={{fontWeight:'bold', fontSize:16}}>{item.label} .</Text>
+      <Text style={{color:'#978e8e'}}>300 cal, pizza hut</Text>
+      </View>
+        <AntDesign name="pluscircleo" size={24} color="royalblue" />
+      </View> 
+        </View>
+    )
+}
+
+
+export class index extends Component {
+  render() {
+    return (
+    <View style={styles.container}>
+        <FoodListItem item={{label:"This is a title"}}/>
+    </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create(
+    {
+        container:{
+            flex:1 ,
+            justifyContent: 'center',
+            padding:10,
+            
+        },
+        card:{backgroundColor:"#eee",padding:10,gap:5,borderRadius:10,borderWidth:1,borderColor:'red',
+            flexDirection:'row',
+            justifyContent:'space-between',
+            
+            alignItems: 'center',
+                }
+    })
+export default index
