@@ -1,17 +1,20 @@
 import { AntDesign } from '@expo/vector-icons';
-import { StyleSheet,Text, View } from 'react-native';
+import { FlatList, StyleSheet,Text, View } from 'react-native';
 export const FoodListItem  =({item})=>{
-
 
     return(
         <View>
-             <View style={styles.card}>
+              <View style={styles.card}>
       <View style={{flex:1}}>
-          <Text style={{fontWeight:'bold', fontSize:16}}>{item.label} .</Text>
+          <Text style={{fontWeight:'bold', fontSize:16}}>{item.label} </Text>
       <Text style={{color:'#978e8e'}}>300 cal, pizza hut</Text>
       </View>
         <AntDesign name="pluscircleo" size={24} color="royalblue" />
       </View> 
+        
+
+
+
         </View>
     )
 }
